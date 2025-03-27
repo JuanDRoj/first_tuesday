@@ -35,8 +35,6 @@ export const verifyUser = async (user_id: string, role?: string) => {
 
   const { data: userRole, error } = await query.single();
 
-  console.log(userRole);
-
   if (error)
     throw new Error(
       "Error: " + (userRole ? error.message : ": User is not admin")
